@@ -1,0 +1,14 @@
+{
+    "name": "function-import",
+    "description": "Import sample book data",
+    "license": "Apache-2.0",
+    "dependencies": {
+        "@google-cloud/firestore": "^4.9.9"
+    },
+    "devDependencies": {
+        "@google-cloud/functions-framework": "^1.7.1"
+    },
+    "scripts": {
+        "start": "npx @google-cloud/functions-framework --target=parseBooks"
+    }
+}
