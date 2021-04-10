@@ -43,3 +43,25 @@ npx @google-cloud/functions-framework --target=parseBooks
 
 curl -d "@../data/books.json" -H "Content-Type: application/json" http://localhost:8080/
 ```
+
+# Cloud Run — CRUD operations exposed as a REST API
+
+Setup Cloud Build and Cloud Run:
+```bash
+gcloud services enable cloudbuild.googleapis.com
+gcloud services enable run.googleapis.com
+gcloud config set run/platform managed
+gcloud config set run/region europe-west1
+```
+
+Build locally with Docker:
+```bash
+docker build -t crud-web-api .
+docker run --rm -p 8080:8080 -it crud-web-api
+```
+
+Build and deploy to Cloud Run:
+```bash
+gcloud builds submit --tag gcr.io/serverless-web-apis/crud-web-api
+gcloud run deploy logmon --image gcr.io/serverless-web-apis/crud-web-api --allow-unauthenticated
+```
