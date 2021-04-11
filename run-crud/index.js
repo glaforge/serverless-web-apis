@@ -95,6 +95,14 @@ app.get('/books/:isbn', async (req, res) => {
     try {
         const docRef = bookStore.doc(parsedIsbn.isbn13);
         const docSnapshot = await docRef.get();
+
+        if (!docSnapshot.exists) {
+            console.log(`Book not found ${parsedIsbn.isbn13}`)
+            res.status(404)
+                .send({error: `Could not find book ${parsedIsbn.isbn13}`});
+            return;
+        }
+
         console.log(`Fetched book ${parsedIsbn.isbn13}`, docSnapshot.data());
 
         const {title, author, pages, year, language, country, ...otherFields} = docSnapshot.data();
