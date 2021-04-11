@@ -14,6 +14,7 @@ Code for the serverless web APIs workshop
 Export environment variables:
 ```
 export REGION_FIRESTORE=europe-west2
+export REGION_FUNCTIONS=europe-west1
 ```
 
 Enable Cloud Functions, Cloud Build, and Cloud Firestore:
@@ -32,7 +33,7 @@ gcloud firestore databases create --region=${REGION_FIRESTORE}
 
 Deploy the function:
 ```bash
-
+gcloud functions deploy bulk-import --trigger-http --runtime=nodejs12 --allow-unauthenticated --region=$REGION_FUNCTIONS --source=.
 ```
 
 Testing function locally:

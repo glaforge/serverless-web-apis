@@ -2,7 +2,6 @@
   {
     "isbn": "9780435272463",
     "author": "Chinua Achebe",
-    "country": "Nigeria",
     "language": "English",
     "pages": 209,
     "title": "Things Fall Apart",
@@ -11,7 +10,6 @@
   {
     "isbn": "9781414251196",
     "author": "Hans Christian Andersen",
-    "country": "Denmark",
     "language": "Danish",
     "pages": 784,
     "title": "Fairy tales",
@@ -20,7 +18,6 @@
   {
     "isbn": "9781420926415",
     "author": "Dante Alighieri",
-    "country": "Italy",
     "language": "Italian",
     "pages": 928,
     "title": "The Divine Comedy",
@@ -29,7 +26,6 @@
   {
     "isbn": "9780140863871",
     "author": "Unknown",
-    "country": "Sumer and Akkadian Empire",
     "language": "Akkadian",
     "pages": 160,
     "title": "The Epic Of Gilgamesh",
@@ -38,7 +34,6 @@
   {
     "isbn": "9781521728772",
     "author": "Unknown",
-    "country": "Achaemenid Empire",
     "language": "Hebrew",
     "pages": 176,
     "title": "The Book Of Job",
@@ -47,7 +42,6 @@
   {
     "isbn": "9780192745002",
     "author": "Unknown",
-    "country": "India/Iran/Iraq/Egypt/Tajikistan",
     "language": "Arabic",
     "pages": 288,
     "title": "One Thousand and One Nights",
@@ -56,7 +50,6 @@
   {
     "isbn": "9788252143041",
     "author": "Unknown",
-    "country": "Iceland",
     "language": "Old Norse",
     "pages": 384,
     "title": "Nj\u00e1l's Saga",
@@ -65,7 +58,6 @@
   {
     "isbn": "9781450512251",
     "author": "Jane Austen",
-    "country": "United Kingdom",
     "language": "English",
     "pages": 226,
     "title": "Pride and Prejudice",
@@ -74,7 +66,6 @@
   {
     "isbn": "9780393971668",
     "author": "Honor\u00e9 de Balzac",
-    "country": "France",
     "language": "French",
     "pages": 443,
     "title": "Le P\u00e8re Goriot",
@@ -83,7 +74,6 @@
   {
     "isbn": "9780802141286",
     "author": "Samuel Beckett",
-    "country": "Republic of Ireland",
     "language": "French, English",
     "pages": 256,
     "title": "Molloy, Malone Dies, The Unnamable, the trilogy",
@@ -92,7 +82,6 @@
   {
     "isbn": "9780140449303",
     "author": "Giovanni Boccaccio",
-    "country": "Italy",
     "language": "Italian",
     "pages": 1024,
     "title": "The Decameron",
@@ -101,7 +90,6 @@
   {
     "isbn": "9780245528798",
     "author": "Jorge Luis Borges",
-    "country": "Argentina",
     "language": "Spanish",
     "pages": 224,
     "title": "Ficciones",
@@ -110,7 +98,6 @@
   {
     "isbn": "9780140430011",
     "author": "Emily Bront\u00eb",
-    "country": "United Kingdom",
     "language": "English",
     "pages": 342,
     "title": "Wuthering Heights",
@@ -119,7 +106,6 @@
   {
     "isbn": "9780394533056",
     "author": "Albert Camus",
-    "country": "Algeria, French Empire",
     "language": "French",
     "pages": 185,
     "title": "The Stranger",
@@ -128,7 +114,6 @@
   {
     "isbn": "9780856462658",
     "author": "Paul Celan",
-    "country": "Romania, France",
     "language": "German",
     "pages": 320,
     "title": "Poems",
@@ -137,7 +122,6 @@
   {
     "isbn": "9780714541396",
     "author": "Louis-Ferdinand C\u00e9line",
-    "country": "France",
     "language": "French",
     "pages": 505,
     "title": "Journey to the End of the Night",
@@ -146,7 +130,6 @@
   {
     "isbn": "9780192741820",
     "author": "Miguel de Cervantes",
-    "country": "Spain",
     "language": "Spanish",
     "pages": 1056,
     "title": "Don Quijote De La Mancha",
@@ -155,7 +138,6 @@
   {
     "isbn": "9780192741813",
     "author": "Geoffrey Chaucer",
-    "country": "England",
     "language": "English",
     "pages": 544,
     "title": "The Canterbury Tales",
@@ -164,7 +146,6 @@
   {
     "isbn": "9781498087988",
     "author": "Anton Chekhov",
-    "country": "Russia",
     "language": "Russian",
     "pages": 194,
     "title": "Stories",
@@ -173,7 +154,6 @@
   {
     "isbn": "9780141441634",
     "author": "Joseph Conrad",
-    "country": "United Kingdom",
     "language": "English",
     "pages": 320,
     "title": "Nostromo",
@@ -182,7 +162,6 @@
   {
     "isbn": "9780141439563",
     "author": "Charles Dickens",
-    "country": "United Kingdom",
     "language": "English",
     "pages": 194,
     "title": "Great Expectations",
@@ -191,7 +170,6 @@
   {
     "isbn": "9780192838742",
     "author": "Denis Diderot",
-    "country": "France",
     "language": "French",
     "pages": 596,
     "title": "Jacques the Fatalist",
@@ -200,7 +178,6 @@
   {
     "isbn": "9783150098103",
     "author": "Alfred D\u00f6blin",
-    "country": "Germany",
     "language": "German",
     "pages": 600,
     "title": "Berlin Alexanderplatz",
@@ -209,7 +186,6 @@
   {
     "isbn": "9780140449136",
     "author": "Fyodor Dostoevsky",
-    "country": "Russia",
     "language": "Russian",
     "pages": 551,
     "title": "Crime and Punishment",
@@ -218,7 +194,6 @@
   {
     "isbn": "9780679642428",
     "author": "Fyodor Dostoevsky",
-    "country": "Russia",
     "language": "Russian",
     "pages": 656,
     "title": "The Idiot",
@@ -227,7 +202,6 @@
   {
     "isbn": "9780679734512",
     "author": "Fyodor Dostoevsky",
-    "country": "Russia",
     "language": "Russian",
     "pages": 768,
     "title": "The Possessed",
@@ -236,7 +210,6 @@
   {
     "isbn": "9780451530608",
     "author": "Fyodor Dostoevsky",
-    "country": "Russia",
     "language": "Russian",
     "pages": 824,
     "title": "The Brothers Karamazov",
@@ -245,7 +218,6 @@
   {
     "isbn": "9780003701302",
     "author": "George Eliot",
-    "country": "United Kingdom",
     "language": "English",
     "pages": 800,
     "title": "Middlemarch",
@@ -254,7 +226,6 @@
   {
     "isbn": "9780141184425",
     "author": "Ralph Ellison",
-    "country": "United States",
     "language": "English",
     "pages": 581,
     "title": "Invisible Man",
@@ -263,7 +234,6 @@
   {
     "isbn": "9780195145663",
     "author": "Euripides",
-    "country": "Greece",
     "language": "Greek",
     "pages": 104,
     "title": "Medea",
@@ -272,7 +242,6 @@
   {
     "isbn": "9781408183915",
     "author": "William Faulkner",
-    "country": "United States",
     "language": "English",
     "pages": 313,
     "title": "Absalom, Absalom!",
@@ -281,7 +250,6 @@
   {
     "isbn": "9780140020878",
     "author": "William Faulkner",
-    "country": "United States",
     "language": "English",
     "pages": 326,
     "title": "The Sound and the Fury",
@@ -290,7 +258,6 @@
   {
     "isbn": "9780192815644",
     "author": "Gustave Flaubert",
-    "country": "France",
     "language": "French",
     "pages": 528,
     "title": "Madame Bovary",
@@ -299,7 +266,6 @@
   {
     "isbn": "9782070361472",
     "author": "Gustave Flaubert",
-    "country": "France",
     "language": "French",
     "pages": 606,
     "title": "Sentimental Education",
@@ -308,7 +274,6 @@
   {
     "isbn": "9780719017247",
     "author": "Federico Garc\u00eda Lorca",
-    "country": "Spain",
     "language": "Spanish",
     "pages": 218,
     "title": "Gypsy Ballads",
@@ -317,7 +282,6 @@
   {
     "isbn": "9780060929794",
     "author": "Gabriel Garc\u00eda M\u00e1rquez",
-    "country": "Colombia",
     "language": "Spanish",
     "pages": 417,
     "title": "One Hundred Years of Solitude",
@@ -326,7 +290,6 @@
   {
     "isbn": "9780140119909",
     "author": "Gabriel Garc\u00eda M\u00e1rquez",
-    "country": "Colombia",
     "language": "Spanish",
     "pages": 368,
     "title": "Love in the Time of Cholera",
@@ -335,7 +298,6 @@
   {
     "isbn": "9780393044249",
     "author": "Johann Wolfgang von Goethe",
-    "country": "Saxe-Weimar",
     "language": "German",
     "pages": 158,
     "title": "Faust",
@@ -344,7 +306,6 @@
   {
     "isbn": "9780679776444",
     "author": "Nikolai Gogol",
-    "country": "Russia",
     "language": "Russian",
     "pages": 432,
     "title": "Dead Souls",
@@ -353,7 +314,6 @@
   {
     "isbn": "9780394703008",
     "author": "G\u00fcnter Grass",
-    "country": "Germany",
     "language": "German",
     "pages": 600,
     "title": "The Tin Drum",
@@ -362,7 +322,6 @@
   {
     "isbn": "9788535931983",
     "author": "Jo\u00e3o Guimar\u00e3es Rosa",
-    "country": "Brazil",
     "language": "Portuguese",
     "pages": 494,
     "title": "The Devil to Pay in the Backlands",
@@ -371,7 +330,6 @@
   {
     "isbn": "9780857861795",
     "author": "Knut Hamsun",
-    "country": "Norway",
     "language": "Norwegian",
     "pages": 176,
     "title": "Hunger",
@@ -380,7 +338,6 @@
   {
     "isbn": "9780020519102",
     "author": "Ernest Hemingway",
-    "country": "United States",
     "language": "English",
     "pages": 128,
     "title": "The Old Man and the Sea",
@@ -389,7 +346,6 @@
   {
     "isbn": "9780141394657",
     "author": "Homer",
-    "country": "Greece",
     "language": "Greek",
     "pages": 608,
     "title": "Iliad",
@@ -398,7 +354,6 @@
   {
     "isbn": "9788420677507",
     "author": "Homer",
-    "country": "Greece",
     "language": "Greek",
     "pages": 374,
     "title": "Odyssey",
@@ -407,7 +362,6 @@
   {
     "isbn": "9781408173312",
     "author": "Henrik Ibsen",
-    "country": "Norway",
     "language": "Norwegian",
     "pages": 68,
     "title": "A Doll's House",
@@ -416,7 +370,6 @@
   {
     "isbn": "9780140181050",
     "author": "James Joyce",
-    "country": "Irish Free State",
     "language": "English",
     "pages": 228,
     "title": "Ulysses",
@@ -425,7 +378,6 @@
   {
     "isbn": "9780805204230",
     "author": "Franz Kafka",
-    "country": "Czechoslovakia",
     "language": "German",
     "pages": 488,
     "title": "Stories",
@@ -434,7 +386,6 @@
   {
     "isbn": "9780805210408",
     "author": "Franz Kafka",
-    "country": "Czechoslovakia",
     "language": "German",
     "pages": 160,
     "title": "The Trial",
@@ -443,7 +394,6 @@
   {
     "isbn": "9780199238286",
     "author": "Franz Kafka",
-    "country": "Czechoslovakia",
     "language": "German",
     "pages": 352,
     "title": "The Castle",
@@ -452,7 +402,6 @@
   {
     "isbn": "9780199540600",
     "author": "K\u0101lid\u0101sa",
-    "country": "India",
     "language": "Sanskrit",
     "pages": 147,
     "title": "The recognition of Shakuntala",
@@ -461,7 +410,6 @@
   {
     "isbn": "9780399505270",
     "author": "Yasunari Kawabata",
-    "country": "Japan",
     "language": "Japanese",
     "pages": 288,
     "title": "The Sound of the Mountain",
@@ -470,7 +418,6 @@
   {
     "isbn": "9780571052653",
     "author": "Nikos Kazantzakis",
-    "country": "Greece",
     "language": "Greek",
     "pages": 368,
     "title": "Zorba the Greek",
@@ -479,7 +426,6 @@
   {
     "isbn": "9780003701203",
     "author": "D. H. Lawrence",
-    "country": "United Kingdom",
     "language": "English",
     "pages": 432,
     "title": "Sons and Lovers",
@@ -488,7 +434,6 @@
   {
     "isbn": "9788475066103",
     "author": "Halld\u00f3r Laxness",
-    "country": "Iceland",
     "language": "Icelandic",
     "pages": 470,
     "title": "Independent People",
@@ -497,7 +442,6 @@
   {
     "isbn": "9788806133030",
     "author": "Giacomo Leopardi",
-    "country": "Italy",
     "language": "Italian",
     "pages": 184,
     "title": "Poems",
@@ -506,7 +450,6 @@
   {
     "isbn": "9780060975906",
     "author": "Doris Lessing",
-    "country": "United Kingdom",
     "language": "English",
     "pages": 688,
     "title": "The Golden Notebook",
@@ -515,7 +458,6 @@
   {
     "isbn": "9780593117828",
     "author": "Astrid Lindgren",
-    "country": "Sweden",
     "language": "Swedish",
     "pages": 160,
     "title": "Pippi Longstocking",
@@ -524,7 +466,6 @@
   {
     "isbn": "9781544869032",
     "author": "Lu Xun",
-    "country": "China",
     "language": "Chinese",
     "pages": 389,
     "title": "Diary of a Madman",
@@ -533,7 +474,6 @@
   {
     "isbn": "9780894106545",
     "author": "Naguib Mahfouz",
-    "country": "Egypt",
     "language": "Arabic",
     "pages": 355,
     "title": "Children of Gebelawi",
@@ -542,7 +482,6 @@
   {
     "isbn": "9780679736462",
     "author": "Thomas Mann",
-    "country": "Germany",
     "language": "German",
     "pages": 736,
     "title": "Buddenbrooks",
@@ -551,7 +490,6 @@
   {
     "isbn": "9780749386429",
     "author": "Thomas Mann",
-    "country": "Germany",
     "language": "German",
     "pages": 720,
     "title": "The Magic Mountain",
@@ -560,7 +498,6 @@
   {
     "isbn": "9780393972832",
     "author": "Herman Melville",
-    "country": "United States",
     "language": "English",
     "pages": 378,
     "title": "Moby Dick",
@@ -569,7 +506,6 @@
   {
     "isbn": "9780485138108",
     "author": "Michel de Montaigne",
-    "country": "France",
     "language": "French",
     "pages": 404,
     "title": "Essays",
@@ -578,7 +514,6 @@
   {
     "isbn": "9788806136659",
     "author": "Elsa Morante",
-    "country": "Italy",
     "language": "Italian",
     "pages": 600,
     "title": "History",
@@ -587,7 +522,6 @@
   {
     "isbn": "9780099511656",
     "author": "Toni Morrison",
-    "country": "United States",
     "language": "English",
     "pages": 321,
     "title": "Beloved",
@@ -596,7 +530,6 @@
   {
     "isbn": "9780393353396",
     "author": "Murasaki Shikibu",
-    "country": "Japan",
     "language": "Japanese",
     "pages": 1360,
     "title": "The Tale of Genji",
@@ -605,7 +538,6 @@
   {
     "isbn": "9783498092757",
     "author": "Robert Musil",
-    "country": "Austria",
     "language": "German",
     "pages": 365,
     "title": "The Man Without Qualities",
@@ -614,7 +546,6 @@
   {
     "isbn": "9780140108088",
     "author": "Vladimir Nabokov",
-    "country": "Russia/United States",
     "language": "English",
     "pages": 317,
     "title": "Lolita",
@@ -623,7 +554,6 @@
   {
     "isbn": "9780140278774",
     "author": "George Orwell",
-    "country": "United Kingdom",
     "language": "English",
     "pages": 272,
     "title": "Nineteen Eighty-Four",
@@ -632,7 +562,6 @@
   {
     "isbn": "9780198146667",
     "author": "Ovid",
-    "country": "Roman Empire",
     "language": "Classical Latin",
     "pages": 576,
     "title": "Metamorphoses",
@@ -641,7 +570,6 @@
   {
     "isbn": "9780141183046",
     "author": "Fernando Pessoa",
-    "country": "Portugal",
     "language": "Portuguese",
     "pages": 272,
     "title": "The Book of Disquiet",
@@ -650,7 +578,6 @@
   {
     "isbn": "9781443774529",
     "author": "Edgar Allan Poe",
-    "country": "United States",
     "language": "English",
     "pages": 842,
     "title": "Tales",
@@ -659,7 +586,6 @@
   {
     "isbn": "9780330375764",
     "author": "Marcel Proust",
-    "country": "France",
     "language": "French",
     "pages": 2408,
     "title": "In Search of Lost Time",
@@ -668,7 +594,6 @@
   {
     "isbn": "9788437616926",
     "author": "Fran\u00e7ois Rabelais",
-    "country": "France",
     "language": "French",
     "pages": 623,
     "title": "Gargantua and Pantagruel",
@@ -677,7 +602,6 @@
   {
     "isbn": "9780292771215",
     "author": "Juan Rulfo",
-    "country": "Mexico",
     "language": "Spanish",
     "pages": 124,
     "title": "Pedro P\u00e1ramo",
@@ -686,7 +610,6 @@
   {
     "isbn": "9780198783435",
     "author": "Rumi",
-    "country": "Sultanate of Rum",
     "language": "Persian",
     "pages": 438,
     "title": "The Masnavi",
@@ -695,7 +618,6 @@
   {
     "isbn": "9780099535096",
     "author": "Salman Rushdie",
-    "country": "United Kingdom, India",
     "language": "English",
     "pages": 536,
     "title": "Midnight's Children",
@@ -704,7 +626,6 @@
   {
     "isbn": "9786257895149",
     "author": "Saadi",
-    "country": "Persia, Persian Empire",
     "language": "Persian",
     "pages": 298,
     "title": "Bostan",
@@ -713,7 +634,6 @@
   {
     "isbn": "9781590173022",
     "author": "Tayeb Salih",
-    "country": "Sudan",
     "language": "Arabic",
     "pages": 139,
     "title": "Season of Migration to the North",
@@ -722,7 +642,6 @@
   {
     "isbn": "9780156035583",
     "author": "Jos\u00e9 Saramago",
-    "country": "Portugal",
     "language": "Portuguese",
     "pages": 352,
     "title": "Blindness",
@@ -731,7 +650,6 @@
   {
     "isbn": "9780198129103",
     "author": "William Shakespeare",
-    "country": "England",
     "language": "English",
     "pages": 432,
     "title": "Hamlet",
@@ -740,7 +658,6 @@
   {
     "isbn": "9780141012292",
     "author": "William Shakespeare",
-    "country": "England",
     "language": "English",
     "pages": 384,
     "title": "King Lear",
@@ -749,7 +666,6 @@
   {
     "isbn": "9780141012315",
     "author": "William Shakespeare",
-    "country": "England",
     "language": "English",
     "pages": 314,
     "title": "Othello",
@@ -758,7 +674,6 @@
   {
     "isbn": "9780671543112",
     "author": "Sophocles",
-    "country": "Greece",
     "language": "Greek",
     "pages": 88,
     "title": "Oedipus the King",
@@ -767,7 +682,6 @@
   {
     "isbn": "9782070412396",
     "author": "Stendhal",
-    "country": "France",
     "language": "French",
     "pages": 576,
     "title": "The Red and the Black",
@@ -776,7 +690,6 @@
   {
     "isbn": "9780395051450",
     "author": "Laurence Sterne",
-    "country": "England",
     "language": "English",
     "pages": 640,
     "title": "The Life And Opinions of Tristram Shandy",
@@ -785,7 +698,6 @@
   {
     "isbn": "9780598180278",
     "author": "Italo Svevo",
-    "country": "Italy",
     "language": "Italian",
     "pages": 412,
     "title": "Confessions of Zeno",
@@ -794,7 +706,6 @@
   {
     "isbn": "9780140437348",
     "author": "Jonathan Swift",
-    "country": "Ireland",
     "language": "English",
     "pages": 178,
     "title": "Gulliver's Travels",
@@ -803,7 +714,6 @@
   {
     "isbn": "9780393966473",
     "author": "Leo Tolstoy",
-    "country": "Russia",
     "language": "Russian",
     "pages": 1296,
     "title": "War and Peace",
@@ -812,7 +722,6 @@
   {
     "isbn": "9780198748847",
     "author": "Leo Tolstoy",
-    "country": "Russia",
     "language": "Russian",
     "pages": 864,
     "title": "Anna Karenina",
@@ -821,7 +730,6 @@
   {
     "isbn": "9781609421359",
     "author": "Leo Tolstoy",
-    "country": "Russia",
     "language": "Russian",
     "pages": 92,
     "title": "The Death of Ivan Ilyich",
@@ -830,7 +738,6 @@
   {
     "isbn": "9780486280615",
     "author": "Mark Twain",
-    "country": "United States",
     "language": "English",
     "pages": 224,
     "title": "The Adventures of Huckleberry Finn",
@@ -839,7 +746,6 @@
   {
     "isbn": "9780670084180",
     "author": "Valmiki",
-    "country": "India",
     "language": "Sanskrit",
     "pages": 152,
     "title": "Ramayana",
@@ -848,7 +754,6 @@
   {
     "isbn": "9781585102259",
     "author": "Virgil",
-    "country": "Roman Empire",
     "language": "Classical Latin",
     "pages": 442,
     "title": "The Aeneid",
@@ -857,7 +762,6 @@
   {
     "isbn": "9780143100133",
     "author": "Vyasa",
-    "country": "India",
     "language": "Sanskrit",
     "pages": 276,
     "title": "Mahabharata",
@@ -866,7 +770,6 @@
   {
     "isbn": "9780451504562",
     "author": "Walt Whitman",
-    "country": "United States",
     "language": "English",
     "pages": 152,
     "title": "Leaves of Grass",
@@ -875,7 +778,6 @@
   {
     "isbn": "9780192834300",
     "author": "Virginia Woolf",
-    "country": "United Kingdom",
     "language": "English",
     "pages": 216,
     "title": "Mrs Dalloway",
@@ -884,7 +786,6 @@
   {
     "isbn": "9780192805607",
     "author": "Virginia Woolf",
-    "country": "United Kingdom",
     "language": "English",
     "pages": 209,
     "title": "To the Lighthouse",
@@ -893,7 +794,6 @@
   {
     "isbn": "9782070369218",
     "author": "Marguerite Yourcenar",
-    "country": "France/Belgium",
     "language": "French",
     "pages": 408,
     "title": "Memoirs of Hadrian",

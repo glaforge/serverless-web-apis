@@ -30,9 +30,11 @@ app.get('/books', async (req, res) => {
     try {
         const bookStore = new Firestore().collection('books');
         const snapshot = await bookStore
+            .where("language", "==", "French")
+            .where("author", "==", "Gustave Flaubert")
             .orderBy('updated', 'desc')
-//            .startAt(0)
-            .limit(10)
+            .startAt(0)
+//            .limit(10)
             .get();
 
         const books = [];
@@ -41,8 +43,8 @@ app.get('/books', async (req, res) => {
             console.log('No book found');
         } else {
             snapshot.forEach(doc => {
-                const {title, author, pages, year, language, country, ...otherFields} = doc.data();
-                const book = {isbn: doc.id, title, author, pages, year, language, country};
+                const {title, author, pages, year, language, ...otherFields} = doc.data();
+                const book = {isbn: doc.id, title, author, pages, year, language};
                 books.push(book);
             });
         }
@@ -71,12 +73,12 @@ async function createBook(isbn, req, res) {
     const parsedIsbn = isbnOK(isbn, res);
     if (!parsedIsbn) return;
 
-    const {title, author, pages, year, language, country} = req.body;
+    const {title, author, pages, year, language} = req.body;
 
     try {
         const docRef = bookStore.doc(parsedIsbn.isbn13);
         await docRef.set({
-            title, author, pages, year, language, country,
+            title, author, pages, year, language,
             updated: Firestore.Timestamp.now()
         });
         console.log(`Saved book ${parsedIsbn.isbn13}`);
@@ -109,8 +111,8 @@ app.get('/books/:isbn', async (req, res) => {
 
         console.log(`Fetched book ${parsedIsbn.isbn13}`, docSnapshot.data());
 
-        const {title, author, pages, year, language, country, ...otherFields} = docSnapshot.data();
-        const book = {isbn: parsedIsbn.isbn13, title, author, pages, year, language, country};
+        const {title, author, pages, year, language, ...otherFields} = docSnapshot.data();
+        const book = {isbn: parsedIsbn.isbn13, title, author, pages, year, language};
 
         res.status(200).send(book);
     } catch (e) {
