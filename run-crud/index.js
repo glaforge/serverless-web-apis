@@ -8,6 +8,9 @@ const app = express();
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
+const cors = require('cors');
+app.use(cors({origin: true}));
+
 const ISBN = require('isbn3');
 
 function isbnOK(isbn, res) {
@@ -28,7 +31,8 @@ app.get('/books', async (req, res) => {
         const bookStore = new Firestore().collection('books');
         const snapshot = await bookStore
             .orderBy('created', 'desc')
-            .limit(10)
+//            .startAt(0)
+//            .limit(10)
             .get();
 
         const books = [];
@@ -73,7 +77,7 @@ async function createBook(isbn, req, res) {
         const docRef = bookStore.doc(parsedIsbn.isbn13);
         await docRef.set({
             title, author, pages, year, language, country,
-            created: Firestore.Timestamp.now()
+            updated: Firestore.Timestamp.now()
         });
         console.log(`Saved book ${parsedIsbn.isbn13}`);
 
@@ -125,7 +129,7 @@ app.put('/books/:isbn', async (req, res) => {
         const docRef = bookStore.doc(parsedIsbn.isbn13);
         await docRef.set({
             ...req.body,
-            created: Firestore.Timestamp.now()
+            updated: Firestore.Timestamp.now()
         }, {merge: true});
         console.log(`Updated book ${parsedIsbn.isbn13}`);
 
@@ -159,6 +163,6 @@ app.delete('/books/:isbn', async (req, res) => {
 
 const port = process.env.PORT || 8080;
 app.listen(port, () => {
-    console.log(`Books CRUD service: listening on port ${port}`);
+    console.log(`Books Web API service: listening on port ${port}`);
     console.log(`Node ${process.version}`);
 });

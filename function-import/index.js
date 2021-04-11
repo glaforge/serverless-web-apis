@@ -26,7 +26,7 @@ exports.parseBooks = async (req, resp) => {
             pages: book.pages,
             year: book.year,
             country: book.country,
-            created: Firestore.Timestamp.now()
+            updated: Firestore.Timestamp.now()
         });
     }
 
