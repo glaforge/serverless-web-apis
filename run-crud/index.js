@@ -8,10 +8,14 @@ const app = express();
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
+const querystring = require('querystring');
+
 const cors = require('cors');
 app.use(cors({origin: true}));
 
 const ISBN = require('isbn3');
+
+const PAGE_SIZE = 10;
 
 function isbnOK(isbn, res) {
     const parsedIsbn = ISBN.parse(isbn);
@@ -24,17 +28,27 @@ function isbnOK(isbn, res) {
 }
 
 // list all books
-// - filter by field
+// - filter by language & author
 // - pagination
 app.get('/books', async (req, res) => {
     try {
-        const bookStore = new Firestore().collection('books');
-        const snapshot = await bookStore
-            .where("language", "==", "French")
-            .where("author", "==", "Gustave Flaubert")
+        var query = new Firestore().collection('books');
+
+        if (!!req.query.author) {
+            console.log(`Filtering by author: ${req.query.author}`);
+            query = query.where("author", "==", req.query.author);
+        }
+        if (!!req.query.language) {
+            console.log(`Filtering by language: ${req.query.language}`);
+            query = query.where("language", "==", req.query.language);
+        }
+
+        const page = parseInt(req.query.page) || 0;
+
+        const snapshot = await query
             .orderBy('updated', 'desc')
-            .startAt(0)
-//            .limit(10)
+            .limit(PAGE_SIZE)
+            .offset(PAGE_SIZE * page)
             .get();
 
         const books = [];
@@ -47,6 +61,19 @@ app.get('/books', async (req, res) => {
                 const book = {isbn: doc.id, title, author, pages, year, language};
                 books.push(book);
             });
+        }
+
+        var links = {};
+        if (page > 0) {
+            const prevQuery = querystring.stringify({...req.query, page: page - 1});
+            links.prev = `${req.path}${prevQuery != '' ? `?${prevQuery}` : ''}`;
+        }
+        if (snapshot.docs.length === PAGE_SIZE) {
+            const nextQuery = querystring.stringify({...req.query, page: page + 1});
+            links.next = `${req.path}${nextQuery != '' ? `?${nextQuery}` : ''}`;
+        }
+        if (Object.keys(links).length > 0) {
+            res.links(links);
         }
 
         res.status(200).send(books);

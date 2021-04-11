@@ -29,6 +29,19 @@ Create and prepare Cloud Firestore database:
 ```bash
 gcloud app create --region=${REGION_FIRESTORE}
 gcloud firestore databases create --region=${REGION_FIRESTORE}
+
+gcloud firestore indexes composite create --collection=books \
+  --field-config field-path=updated,order=descending \
+  --field-config field-path=author,order=ascending \
+  --field-config field-path=language,order=ascending
+
+gcloud firestore indexes composite create --collection=books \
+  --field-config field-path=updated,order=descending \
+  --field-config field-path=language,order=ascending
+
+gcloud firestore indexes composite create --collection=books \
+  --field-config field-path=updated,order=descending \
+  --field-config field-path=author,order=ascending
 ```
 
 Deploy the function:
@@ -67,6 +80,9 @@ curl http://localhost:8080/books/9780140449136
 curl http://localhost:8080/books/9782070360536
 curl -XPUT -d '{"title":"Book"}' -H "Content-Type: application/json" http://localhost:8080/books/9780003701203
 curl http://localhost:8080/books
+curl http://localhost:8080/books?author=Virginia+Woolf
+curl http://localhost:8080/books?language=English
+curl http://localhost:8080/books?page=3
 ```
 
 Build locally with Docker:
