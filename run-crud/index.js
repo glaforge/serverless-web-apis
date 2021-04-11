@@ -30,9 +30,9 @@ app.get('/books', async (req, res) => {
     try {
         const bookStore = new Firestore().collection('books');
         const snapshot = await bookStore
-            .orderBy('created', 'desc')
+            .orderBy('updated', 'desc')
 //            .startAt(0)
-//            .limit(10)
+            .limit(10)
             .get();
 
         const books = [];
@@ -42,7 +42,7 @@ app.get('/books', async (req, res) => {
         } else {
             snapshot.forEach(doc => {
                 const {title, author, pages, year, language, country, ...otherFields} = doc.data();
-                const book = {title, author, pages, year, language, country};
+                const book = {isbn: doc.id, title, author, pages, year, language, country};
                 books.push(book);
             });
         }
@@ -110,7 +110,7 @@ app.get('/books/:isbn', async (req, res) => {
         console.log(`Fetched book ${parsedIsbn.isbn13}`, docSnapshot.data());
 
         const {title, author, pages, year, language, country, ...otherFields} = docSnapshot.data();
-        const book = {title, author, pages, year, language, country};
+        const book = {isbn: parsedIsbn.isbn13, title, author, pages, year, language, country};
 
         res.status(200).send(book);
     } catch (e) {
