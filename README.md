@@ -54,6 +54,18 @@ gcloud config set run/platform managed
 gcloud config set run/region europe-west1
 ```
 
+Run locally and send some requests:
+```bash
+npm start
+
+curl -XPOST -d '{"isbn":"9782070368228","title":"Book","author":"me","pages":123,"year":2021,"language":"French","country":"France"}' -H "Content-Type: application/json" http://localhost:8080/books
+curl -XPOST -d '{"title":"Book","author":"me","pages":123,"year":2021,"language":"French","country":"France"}' -H "Content-Type: application/json" http://localhost:8080/books/9782070368228
+curl -XDELETE http://localhost:8080/books/9782070368228
+curl http://localhost:8080/books/9780140449136
+curl -XPUT -d '{"title":"Book"}' -H "Content-Type: application/json" http://localhost:8080/books/9780003701203
+curl http://localhost:8080/books
+```
+
 Build locally with Docker:
 ```bash
 docker build -t crud-web-api .
