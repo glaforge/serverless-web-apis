@@ -6,6 +6,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.37/dist/themes/base.css">
     <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.37/dist/shoelace.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/barcodes/JsBarcode.ean-upc.min.js"></script>
 
     <script src="/js/app.js"></script>
     <link rel="stylesheet" type="text/css" href="/css/style.css">
@@ -16,14 +17,16 @@
         Book library
     </h1>
 
+    <div id="filter">
+        
+    </div>    
+
     <div id="library"></div>
 
     <div id="buttons">
-        <sl-button-group>
-            <sl-button type="primary" size="large">
-                More books...
-            </sl-button>
-        </sl-button-group>
+        <sl-button id="more-button" type="primary" size="large">
+            More books...
+        </sl-button>
     </div>
 
     <template id="book-card">
@@ -34,15 +37,18 @@
                 <slot name="author">Author</slot>
             </p>
             <p>
+                <small><sl-icon name="globe2"></sl-icon> <slot name="language">French</slot></small><br/>
                 <small><sl-icon name="calendar3"></sl-icon> <slot name="year">1977</slot></small><br/>
                 <small><sl-icon name="files-alt"></sl-icon> <slot name="pages">123</slot> pages</small><br/>
-                <small><sl-icon name="upc-scan"></sl-icon> <slot name="isbn">9781234567890</slot></small>
+
+                <div class="barcode-placeholder"><slot name="barcode"></slot></div>
             </p>
             <style>
-                * {
+                sl-card::part(base) {
+                    box-shadow: var(--sl-shadow-large);
                     --border-color: var(--sl-color-primary-200);
-                    --border-width: 2px;
-                }
+                    --border-width: 1px;
+                }                
             </style>
         </sl-card>
     </template>
