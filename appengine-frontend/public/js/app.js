@@ -55,6 +55,7 @@ async function appendMoreBooks(server, page, language) {
         bookCard.querySelector('slot[name=language]').innerText = book.language;
         bookCard.querySelector('slot[name=author]').innerText = book.author;
         bookCard.querySelector('slot[name=year]').innerText = book.year;
+        bookCard.querySelector('slot[name=pages]').innerText = book.pages;
         
         const img = document.createElement('img');
         img.setAttribute('id', book.isbn);
