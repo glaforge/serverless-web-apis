@@ -1,0 +1,52 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: var(--sl-font-sans);
+  font-size: var(--sl-font-size-medium);
+  font-weight: var(--sl-font-weight-normal);
+  letter-spacing: var(--sl-letter-spacing-normal);
+  color: var(--sl-color-gray-800);
+  line-height: var(--sl-line-height-normal);
+  padding: 20px;
+}
+
+a {
+  color: var(--sl-color-primary-500);
+}
+
+strong {
+  font-weight: var(--sl-font-weight-bold);
+}
+
+.card-overview  {
+  width: 300px;
+  height: 300px;
+  padding-right: 10px;
+}
+
+.card-overview small {
+  color: var(--sl-color-gray-500);
+}
+
+.card-overview .title {
+  min-height: 70px;
+  font-size: var(--sl-font-size-large);
+  color: var(--sl-color-primary-600);
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+
+@media screen and (max-width: 1040px) {
+ 
+}
