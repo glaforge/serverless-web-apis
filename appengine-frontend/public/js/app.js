@@ -25,7 +25,11 @@ document.addEventListener("DOMContentLoaded", async function(event) {
 });
 
 async function appendMoreBooks(server, page, language) {
-    const response = await fetch(`${server}/books?page=${page}${!!language ? `&language=${language}` : ''}`);
+    const searchUrl = new URL(`${server}/books`);
+    if (!!page) searchUrl.searchParams.append('page', page);
+    if (!!language) searchUrl.searchParams.append('language', language);
+        
+    const response = await fetch(searchUrl.href);
     const books = await response.json();
 
     const library = document.getElementById('library');
