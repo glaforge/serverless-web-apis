@@ -11,7 +11,9 @@ app.use(bodyParser.json());
 const querystring = require('querystring');
 
 const cors = require('cors');
-app.use(cors());
+app.use(cors({
+    exposedHeaders: ['Content-Length', 'Content-Type', 'Link'],
+}));
 
 const ISBN = require('isbn3');
 
