@@ -99,7 +99,22 @@ gcloud run deploy run-crud --image gcr.io/serverless-web-apis/crud-web-api --all
 
 # App Engine — Web frontend
 
-Deploy app on App:
+Export Cloud Run Web API service URL so it's available for running the App Engine app locally:
+```bash
+export RUN_CRUD_SERVICE_URL=https://run-crud-sh43zgzkgq-ew.a.run.app
+```
+
+Run the application locally:
+```bash
+npm start
+```
+
+Or with continuous file watching / server reloading with:
+```bash
+npm run dev
+```
+
+Deploy app on App, but ensure `app.yaml` is updated with Cloud Run service URL:
 ```bash
 gcloud app deploy -q
 ```

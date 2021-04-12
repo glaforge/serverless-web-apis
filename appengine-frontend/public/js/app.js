@@ -1,7 +1,11 @@
 console.log('App started');
 
 document.addEventListener("DOMContentLoaded", async function(event) {
-    const server = 'https://run-crud-sh43zgzkgq-ew.a.run.app';
+    const serverUrlResponse = await fetch('/webapi');
+    const serverUrl = await serverUrlResponse.text();
+    console.log('Web API endpoint:', serverUrl);
+    
+    const server = serverUrl + '/books';
     var page = 0;
     var language = '';
 
@@ -25,12 +29,22 @@ document.addEventListener("DOMContentLoaded", async function(event) {
 });
 
 async function appendMoreBooks(server, page, language) {
-    const searchUrl = new URL(`${server}/books`);
+    const searchUrl = new URL(server);
     if (!!page) searchUrl.searchParams.append('page', page);
     if (!!language) searchUrl.searchParams.append('language', language);
         
     const response = await fetch(searchUrl.href);
     const books = await response.json();
+
+    const linkHeader = response.headers.get('Link')
+    console.log('Link', linkHeader);
+    if (!!linkHeader && linkHeader.indexOf('rel="next"') > -1) {
+        console.log('Show more button');
+        document.getElementById('buttons').style.display = 'block';
+    } else {
+        console.log('Hide more button');
+        document.getElementById('buttons').style.display = 'none';
+    }
 
     const library = document.getElementById('library');
     const template = document.getElementById('book-card');

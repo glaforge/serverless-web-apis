@@ -10,12 +10,13 @@ app.get('/', async (req, res) => {
     res.redirect('/html/index.html');
 });
 
-app.get('/test', async (req, res) => {
-    res.send("TEST");
+app.get('/webapi', async (req, res) => {
+    res.send(process.env.RUN_CRUD_SERVICE_URL);
 });
 
 const port = process.env.PORT || 8080;
 app.listen(port, () => {
     console.log(`Book library web frontend: listening on port ${port}`);
     console.log(`Node ${process.version}`);
+    console.log(`Web API endpoint ${process.env.RUN_CRUD_SERVICE_URL}`);
 });
