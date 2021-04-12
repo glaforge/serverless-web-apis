@@ -96,3 +96,10 @@ Build and deploy to Cloud Run:
 gcloud builds submit --tag gcr.io/serverless-web-apis/crud-web-api
 gcloud run deploy run-crud --image gcr.io/serverless-web-apis/crud-web-api --allow-unauthenticated
 ```
+
+# App Engine — Web frontend
+
+Deploy app on App:
+```bash
+gcloud app deploy -q
+```

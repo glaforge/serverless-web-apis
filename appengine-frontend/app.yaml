@@ -1,0 +1,27 @@
+runtime: nodejs14
+
+env_variables:
+  RUN_CRUD_SERVICE_URL: https://run-crud-sh43zgzkgq-ew.a.run.app/
+
+handlers:
+
+- url: /js
+  static_dir: public/js
+
+- url: /css
+  static_dir: public/css
+
+- url: /img
+  static_dir: public/img
+
+- url: /(.+\.html)
+  static_files: public/html/\1
+  upload: public/(.+\.html)
+
+- url: /
+  static_files: public/html/index.html
+  upload: public/html/index\.html
+
+- url: /.*
+  secure: always
+  script: auto
