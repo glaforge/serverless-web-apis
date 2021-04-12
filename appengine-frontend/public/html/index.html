@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Book library — Serverless Web API</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.37/dist/themes/base.css">
     <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.37/dist/shoelace.js"></script>
@@ -18,7 +19,20 @@
     </h1>
 
     <div id="filter">
-        
+        <sl-select id="language-select" placeholder="Select a language..." clearable>
+            <sl-menu-item value="English">English</sl-menu-item>
+            <sl-menu-item value="French">French</sl-menu-item>
+            <sl-menu-item value="German">German</sl-menu-item>
+            <sl-menu-item value="Russian">Russian</sl-menu-item>
+            <sl-menu-item value="Italian">Italian</sl-menu-item>
+            <sl-menu-item value="Arabic">Arabic</sl-menu-item>
+            <sl-menu-item value="Greek">Greek</sl-menu-item>
+            <sl-menu-item value="Portuguese">Portuguese</sl-menu-item>
+            <sl-menu-item value="Sanskrit">Sanskrit</sl-menu-item>
+            <sl-menu-item value="Norwegian">Norwegian</sl-menu-item>
+            <sl-menu-item value="Japanese">Japanese</sl-menu-item>
+        </sl-select>
+        <br/>
     </div>    
 
     <div id="library"></div>

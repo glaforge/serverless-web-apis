@@ -42,6 +42,11 @@ strong {
   color: var(--sl-color-primary-600);
 }
 
+#filter {
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
 @media screen and (max-width: 768px) {
 
 }

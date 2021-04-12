@@ -1,19 +1,31 @@
 console.log('App started');
 
 document.addEventListener("DOMContentLoaded", async function(event) {
+    const server = 'https://run-crud-sh43zgzkgq-ew.a.run.app';
     var page = 0;
+    var language = '';
 
     const moreButton = document.getElementById('more-button');
     moreButton.addEventListener('sl-focus', event => {
         console.log('Button clicked');
         moreButton.blur();
 
-        appendMoreBooks(page++);
+        appendMoreBooks(server, page++, language);
+    });
+
+    const authorSelect = document.getElementById('language-select');
+    authorSelect.addEventListener('sl-change', event => {
+        page = 0;
+        language = event.srcElement.value;
+        document.getElementById('library').replaceChildren();
+        console.log(`Language selected: "${language}"`);
+
+        appendMoreBooks(server, page++, language);
     });
 });
 
-async function appendMoreBooks(page) {
-    const response = await fetch('https://run-crud-sh43zgzkgq-ew.a.run.app/books?page=' + page);
+async function appendMoreBooks(server, page, language) {
+    const response = await fetch(`${server}/books?page=${page}${!!language ? `&language=${language}` : ''}`);
     const books = await response.json();
 
     const library = document.getElementById('library');
