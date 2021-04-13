@@ -13,8 +13,7 @@ Code for the serverless web APIs workshop
 
 Export environment variables:
 ```
-export REGION_FIRESTORE=europe-west2
-export REGION_FUNCTIONS=europe-west1
+export REGION=europe-west3
 ```
 
 Enable Cloud Functions, Cloud Build, and Cloud Firestore:
@@ -27,8 +26,8 @@ gcloud services enable firestore.googleapis.com
 
 Create and prepare Cloud Firestore database:
 ```bash
-gcloud app create --region=${REGION_FIRESTORE}
-gcloud firestore databases create --region=${REGION_FIRESTORE}
+gcloud app create --region=${REGION}
+gcloud firestore databases create --region=${REGION}
 
 gcloud firestore indexes composite create --collection=books \
   --field-config field-path=updated,order=descending \
@@ -46,7 +45,7 @@ gcloud firestore indexes composite create --collection=books \
 
 Deploy the function:
 ```bash
-gcloud functions deploy bulk-import --trigger-http --runtime=nodejs12 --allow-unauthenticated --region=$REGION_FUNCTIONS --source=.
+gcloud functions deploy bulk-import --trigger-http --runtime=nodejs12 --allow-unauthenticated --region=${REGION} --source=.
 ```
 
 Testing function locally:
@@ -66,7 +65,7 @@ gcloud services enable cloudbuild.googleapis.com
 gcloud services enable run.googleapis.com
 
 gcloud config set run/platform managed
-gcloud config set run/region europe-west1
+gcloud config set run/region ${REGION}
 ```
 
 Run locally and send some requests:
@@ -94,7 +93,7 @@ docker run --rm -p 8080:8080 -it crud-web-api
 Build and deploy to Cloud Run:
 ```bash
 gcloud builds submit --tag gcr.io/serverless-web-apis/crud-web-api
-gcloud run deploy run-crud --image gcr.io/serverless-web-apis/crud-web-api --allow-unauthenticated
+gcloud run deploy run-crud --image gcr.io/serverless-web-apis/crud-web-api --allow-unauthenticated --region=${REGION} --platform=managed
 ```
 
 # App Engine — Web frontend
