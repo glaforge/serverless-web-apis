@@ -1,7 +1,7 @@
 runtime: nodejs14
 
 env_variables:
-  RUN_CRUD_SERVICE_URL: https://run-crud-sh43zgzkgq-ew.a.run.app/
+  RUN_CRUD_SERVICE_URL: https://run-crud-sh43zgzkgq-ew.a.run.app
 
 handlers:
 

@@ -45,7 +45,13 @@ gcloud firestore indexes composite create --collection=books \
 
 Deploy the function:
 ```bash
-gcloud functions deploy bulk-import --trigger-http --runtime=nodejs12 --allow-unauthenticated --region=${REGION} --source=.
+gcloud functions deploy bulk-import \
+       --trigger-http \
+       --runtime=nodejs12 \
+       --allow-unauthenticated \
+       --region=${REGION} \
+       --source=. \
+       --entry-point=parseBooks
 ```
 
 Testing function locally:
@@ -72,8 +78,8 @@ Run locally and send some requests:
 ```bash
 npm start
 
-curl -XPOST -d '{"isbn":"9782070368228","title":"Book","author":"me","pages":123,"year":2021,"language":"French","country":"France"}' -H "Content-Type: application/json" http://localhost:8080/books
-curl -XPOST -d '{"title":"Book","author":"me","pages":123,"year":2021,"language":"French","country":"France"}' -H "Content-Type: application/json" http://localhost:8080/books/9782070368228
+curl -XPOST -d '{"isbn":"9782070368228","title":"Book","author":"me","pages":123,"year":2021,"language":"French"}' -H "Content-Type: application/json" http://localhost:8080/books
+curl -XPOST -d '{"title":"Book","author":"me","pages":123,"year":2021,"language":"French"}' -H "Content-Type: application/json" http://localhost:8080/books/9782070368228
 curl -XDELETE http://localhost:8080/books/9782070368228
 curl http://localhost:8080/books/9780140449136
 curl http://localhost:8080/books/9782070360536
@@ -92,8 +98,8 @@ docker run --rm -p 8080:8080 -it crud-web-api
 
 Build and deploy to Cloud Run:
 ```bash
-gcloud builds submit --tag gcr.io/serverless-web-apis/crud-web-api
-gcloud run deploy run-crud --image gcr.io/serverless-web-apis/crud-web-api --allow-unauthenticated --region=${REGION} --platform=managed
+gcloud builds submit --tag gcr.io/${GOOGLE_CLOUD_PROJECT}/crud-web-api
+gcloud run deploy run-crud --image gcr.io/${GOOGLE_CLOUD_PROJECT}/crud-web-api --allow-unauthenticated --region=${REGION} --platform=managed
 ```
 
 # App Engine — Web frontend
