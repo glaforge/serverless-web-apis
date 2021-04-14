@@ -60,7 +60,6 @@ async function appendMoreBooks(server, page, language) {
         const img = document.createElement('img');
         img.setAttribute('id', book.isbn);
         img.setAttribute('class', 'img-barcode-' + book.isbn)
-        //bookCard.querySelector('slot[name=barcode]').parentElement.appendChild(img);
         bookCard.querySelector('slot[name=barcode]').appendChild(img);
 
         library.appendChild(bookCard);
