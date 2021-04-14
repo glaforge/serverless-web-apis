@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", async function(event) {
         appendMoreBooks(server, page++, language);
     });
 
-    const authorSelect = document.getElementById('language-select');
-    authorSelect.addEventListener('sl-change', event => {
+    const langSelect = document.getElementById('language-select');
+    langSelect.addEventListener('sl-change', event => {
         page = 0;
         language = event.srcElement.value;
         document.getElementById('library').replaceChildren();
