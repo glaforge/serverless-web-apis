@@ -1,8 +1,9 @@
 const Firestore = require('@google-cloud/firestore');
+const functions = require('@google-cloud/functions-framework');
 const firestore = new Firestore();
 const bookStore = firestore.collection('books');
 
-exports.parseBooks = async (req, resp) => {
+functions.http('parseBooks', async (req, resp) => {
     if (req.method !== "POST") {
         resp.status(405).send({error: "Only method POST allowed"});
         return;
@@ -39,4 +40,4 @@ exports.parseBooks = async (req, resp) => {
     };
 
     resp.status(202).send({status: "OK"});
-};
+})
