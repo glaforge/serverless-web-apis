@@ -3,7 +3,8 @@
     "description": "Import sample book data",
     "license": "Apache-2.0",
     "dependencies": {
-        "@google-cloud/firestore": "^4.9.9"
+        "@google-cloud/firestore": "^4.9.9",
+        "@google-cloud/functions-framework": "^3.1.0"
     },
     "devDependencies": {
         "@google-cloud/functions-framework": "^1.7.1"
