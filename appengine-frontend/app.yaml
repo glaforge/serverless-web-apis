@@ -1,4 +1,4 @@
-runtime: nodejs14
+runtime: nodejs20
 
 env_variables:
   RUN_CRUD_SERVICE_URL: https://run-crud-sh43zgzkgq-ew.a.run.app
