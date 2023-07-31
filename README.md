@@ -27,7 +27,7 @@ gcloud services enable firestore.googleapis.com
 Create and prepare Cloud Firestore database:
 ```bash
 gcloud app create --region=${REGION}
-gcloud firestore databases create --region=${REGION}
+gcloud firestore databases create --location=${REGION}
 
 gcloud firestore indexes composite create --collection=books \
   --field-config field-path=updated,order=descending \
@@ -46,8 +46,9 @@ gcloud firestore indexes composite create --collection=books \
 Deploy the function:
 ```bash
 gcloud functions deploy bulk-import \
+       --gen2 \
        --trigger-http \
-       --runtime=nodejs12 \
+       --runtime=nodejs20 \
        --allow-unauthenticated \
        --region=${REGION} \
        --source=. \
