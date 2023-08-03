@@ -29,18 +29,14 @@ Create and prepare Cloud Firestore database:
 gcloud app create --region=${REGION}
 gcloud firestore databases create --location=${REGION}
 
-gcloud firestore indexes composite create --collection=books \
-  --field-config field-path=updated,order=descending \
-  --field-config field-path=author,order=ascending \
-  --field-config field-path=language,order=ascending
+gcloud firestore indexes composite create --collection-group=books \
+--field-config field-path=language,order=ascending \
+--field-config field-path=updated,order=descending 
 
-gcloud firestore indexes composite create --collection=books \
-  --field-config field-path=updated,order=descending \
-  --field-config field-path=language,order=ascending
+gcloud firestore indexes composite create --collection-group=books \
+--field-config field-path=author,order=ascending \
+--field-config field-path=updated,order=descending 
 
-gcloud firestore indexes composite create --collection=books \
-  --field-config field-path=updated,order=descending \
-  --field-config field-path=author,order=ascending
 ```
 
 Deploy the function:
