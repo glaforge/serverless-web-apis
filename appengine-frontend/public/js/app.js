@@ -18,9 +18,9 @@ document.addEventListener("DOMContentLoaded", async function(event) {
     });
 
     const langSelect = document.getElementById('language-select');
-    langSelect.addEventListener('sl-change', event => {
+    langSelect.addEventListener('change', event => {
         page = 0;
-        language = event.srcElement.value;
+        language = event.target.value;
         document.getElementById('library').replaceChildren();
         console.log(`Language selected: "${language}"`);
 
